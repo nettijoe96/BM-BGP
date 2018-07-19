@@ -147,13 +147,14 @@ If BGPsec and RPKI were fully implemented by every network and on every allocate
 
 The second type of incorrectness, withholding routing updates, is the type of incorrectness focused on in this paper. There are two reasons for withholding routing updates, although the list is probably not exhaustive. The first reason is from misconfigurations. A router may not have the appropriate input or output policy configured correctly for a specific IP prefix (Wang p.1-2 2009, Feamster 2005, Mahajan 2002). The second reason is malicious transit providers. The diagram below shows both scenarios.\footnote{Author's note: I have not been able to find malicious transit providers in the literature but it is theoretically possible.}
 
+Strong correctness would also be beneficial if it could be reached as it would by definition prevent unexpected traffic flow scenarios. If there was a way to know about selective of route advertisements, unexpected traffic flows could be more easily avoided (RFC 7789) and strong correctness achieved. 
+
+
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[scale=0.40]{routing-correctness_1_.png}
     \caption{The dotted lines show a possibility of not sending an update. The misconfiguration and malicious transit are on the same diagram because the effects are similar enough to each other in this simple scenario.  
 }
-
-Strong correctness would also be beneficial if it could be reached as it would by definition prevent unexpected traffic flow scenarios. If there was a way to know about selective of route advertisements, unexpected traffic flows could be more easily avoided (RFC 7789) and strong correctness achieved. 
 
 \end{figure}
 
